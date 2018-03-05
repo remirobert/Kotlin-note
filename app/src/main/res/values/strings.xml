@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KotlinNote</string>
+    <string name="add_a_new_task">add a new task</string>
 </resources>

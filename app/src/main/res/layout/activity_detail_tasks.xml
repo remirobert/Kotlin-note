@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kotlinnote.remirobert.kotlinnote.ProjectsList.MainActivity">
+    tools:context="com.kotlinnote.remirobert.kotlinnote.Tasks.DetailTasksActivity">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -16,5 +16,4 @@
             android:layout_height="match_parent" />
 
     </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>
