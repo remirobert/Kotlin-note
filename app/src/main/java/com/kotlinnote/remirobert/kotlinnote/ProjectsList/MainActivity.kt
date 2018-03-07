@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.kotlinnote.remirobert.kotlinnote.Domain.Project
 import com.kotlinnote.remirobert.kotlinnote.R
+import com.kotlinnote.remirobert.kotlinnote.Tasks.DetailTasksActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecycleView() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = ProjectsAdapter(prepareListTasks(), this)
+        recyclerView.adapter = ProjectsAdapter(prepareListTasks(), {project ->  
+            showProjectTasksActivity(project)
+        })
     }
 
     private fun prepareListTasks(): ArrayList<Project> {
@@ -37,4 +40,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createRecycleView(): RecyclerView = findViewById(R.id.recycle_view_tasks)
+
+    private fun showProjectTasksActivity(project: Project) {
+        val intent = DetailTasksActivity.newIntent(this)
+        startActivity(intent)
+    }
 }
